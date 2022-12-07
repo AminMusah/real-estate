@@ -4,6 +4,8 @@ import MailLineIcon from 'remixicon-react/MailLineIcon'
 import PhoneLineIcon from 'remixicon-react/PhoneLineIcon'
 
 function Footer() {
+  const date = new Date()
+  const year = date.getFullYear()
   return (
     <div>
           <footer className="footer">
@@ -166,7 +168,7 @@ function Footer() {
       <div className="footer-bottom">
 
         <p className="copyright">
-          Copyright © 2022 realesate. All Rights Reserved.
+          Copyright © {year} realesate. All Rights Reserved.
         </p>
 
       </div>
