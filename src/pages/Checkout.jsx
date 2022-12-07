@@ -1,8 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
+import paystackPop from "@paystack/inline-js";
 function Checkout() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [amount, setAmount] = useState("");
+  const payWithPaystack = (e) => {
+    e.preventDefault()
+    const payStack = new paystackPop();
+    payStack.newTransaction({
+      key: "pk_test_26b8ff5d42befde7b35e08f9f379b26ef3e2c1c2",
+      firstName,
+      lastName,
+      amount: amount * 100,
+      email,
+      onSuccess(transaction) {
+        let message = `Payment Complete! Reference ${transaction.reference}`;
+        alert(message);
+        setAmount("")
+        setEmail("")
+        setFirstName("")
+        setLastName("")
+      },
+      onCancel() {
+        alert(`You have canceled your transaction!`);
+      },
+    });
+  };
   return (
     <div>
       <Header />
@@ -13,20 +39,15 @@ function Checkout() {
               Item
             </p> */}
 
-            <h2 className="h2 section-title reveal-left">
-              Details
-            </h2>
+            <h2 className="h2 section-title reveal-left">Details</h2>
 
             <ul className="footer-list">
-
               <li className="footer-list-item">
                 <p>Lorem ipsum dolor sit.</p>
-
               </li>
 
               <li className="footer-list-item">
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-
               </li>
 
               <li className="footer-list-item">
@@ -59,15 +80,19 @@ function Checkout() {
               type="text"
               id="Name"
               name="Name"
-              placeholder="Full Name.."
+              placeholder="First Name.."
+              value={firstName}
+              onChange={(e)=> setFirstName(e.target.value) }
               required
             />
             <input
-              type="tel"
-              id="phone"
-              name="Phone Number"
-              placeholder="Phone Number"
+              type="text"
+              id="Name"
+              name="Name"
+              placeholder="Last Name.."
               required
+              onChange={(e)=> setLastName(e.target.value) }
+
             />
           </div>
           <div className="input-wrapper">
@@ -77,6 +102,8 @@ function Checkout() {
               name="Email"
               placeholder="Email"
               required
+              onChange={(e)=> setEmail(e.target.value) }
+
             />
             <input
               type="tel"
@@ -84,6 +111,8 @@ function Checkout() {
               name="Amount"
               placeholder="Amount"
               required
+              onChange={(e)=> setAmount(e.target.value) }
+
             />
             {/* <select name="Service" id="service" className="input-field" required>
               <option value="Property Management">Property Management</option>
@@ -94,17 +123,19 @@ function Checkout() {
               <option value="Enquiry">Enquiry</option>
             </select> */}
           </div>
-          <div className="input-wrapper">
+          {/* <div className="input-wrapper">
             <textarea
               id="message"
               name="Message"
               placeholder="Your Message.."
               required
             ></textarea>
-          </div>
+          </div> */}
 
-          <button className="btn btn-secondary contact-button">
-            <span className="span">Submit</span>
+          <button className="btn btn-secondary contact-button" onClick={payWithPaystack}>
+            <span className="span" >
+              Submit
+            </span>
           </button>
         </form>
       </section>

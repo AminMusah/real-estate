@@ -829,7 +829,7 @@ input[type="submit"]:hover {
 }
 
 .property-card {
-  border: 1px solid var(--rich-black-fogra-29);
+  border: 1px solid var(--light-gray);
   box-shadow: var(--shadow-2);
 }
 .property-list li {
