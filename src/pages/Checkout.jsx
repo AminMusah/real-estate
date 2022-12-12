@@ -10,7 +10,7 @@ function Checkout() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [amount, setAmount] = useState(10);
+  const [amount, setAmount] = useState(total(items));
   const payWithPaystack = (e) => {
     e.preventDefault();
     const payStack = new paystackPop();
@@ -113,7 +113,7 @@ function Checkout() {
               name="Amount"
               placeholder="Amount"
               required
-              value={total(items)}
+              value={amount}
               onChange={(e) => setAmount(e.target.value)}
             />
             {/* <select name="Service" id="service" className="input-field" required>
