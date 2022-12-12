@@ -1,7 +1,10 @@
 import React from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-// import Header from ''
+import Building2FillIcon from 'remixicon-react/Building2FillIcon'
+import BuildingLineIcon from 'remixicon-react/BuildingLineIcon'
+import Home5LineIcon from 'remixicon-react/Home5LineIcon'
+import { Link } from 'react-router-dom'
 
 function Service() {
   return (
@@ -13,7 +16,7 @@ function Service() {
           <ul className="grid-list">
 
             <li>
-              <a href="#" className="service-card" >
+              <Link to="#" className="service-card" >
 
                 <figure className="card-banner">
                   <img src="/images/property-1.jpg" width="450" height="350" loading="lazy" alt="Buy a home"
@@ -21,16 +24,16 @@ function Service() {
                 </figure>
 
                 <div className="card-content has-before">
-                  <ion-icon name="restaurant-outline" ></ion-icon>
+                  <BuildingLineIcon/>
 
                   <h3 className="h3 card-title">Buy A home</h3>
                 </div>
 
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#" className="service-card" >
+              <Link to="#" className="service-card" >
 
                 <figure className="card-banner">
                   <img src="/images/property-2.jpg" width="450" height="350" loading="lazy" alt="rent a home"
@@ -38,16 +41,16 @@ function Service() {
                 </figure>
 
                 <div className="card-content has-before">
-                  <ion-icon name="cafe-outline" ></ion-icon>
+                  <Building2FillIcon/>
 
                   <h3 className="h3 card-title">Rent a home</h3>
                 </div>
 
-              </a>
+              </Link>
             </li>
 
             <li>
-              <a href="#" className="service-card" >
+              <Link to="#" className="service-card" >
 
                 <figure className="card-banner">
                   <img src="/images/property-3.jpg" width="450" height="350" loading="lazy" alt="Sell a home"
@@ -55,12 +58,12 @@ function Service() {
                 </figure>
 
                 <div className="card-content has-before">
-                  <ion-icon name="wine-outline"></ion-icon>
+                  <Home5LineIcon/>
 
                   <h3 className="h3 card-title">Sell a home</h3>
                 </div>
 
-              </a>
+              </Link>
             </li>
 
           </ul>

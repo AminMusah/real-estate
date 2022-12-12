@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import WhatsappFillIcon from 'remixicon-react/WhatsappFillIcon'
 import PhoneLineIcon from 'remixicon-react/PhoneLineIcon'
 import MailLineIcon from 'remixicon-react/MailLineIcon'
+import { Link } from 'react-router-dom'
 
 function Contact() {
   return (
@@ -15,7 +16,7 @@ function Contact() {
           <ul className="grid-list">
 
             <li>
-              <a href="#" className="service-card" >
+              <a href="#appointment" className="service-card" >
 
                 <figure className="card-banner">
                   <img src="/images/sendmail.avif" width="450" height="350" loading="lazy" alt="Buy a home"

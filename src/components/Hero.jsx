@@ -14,7 +14,7 @@ function Hero() {
             Welcome to the Real Estate Agency
           </p>
 
-          <h1 class="h1 hero-title reveal-left" id="hero-label" >
+          <h1 className="h1 hero-title reveal-left" id="hero-label" >
           Find Your Dream House By Us
           </h1>
 
