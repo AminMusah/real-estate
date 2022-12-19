@@ -853,6 +853,7 @@ input[type="submit"]:hover {
   height: 100%;
   object-fit: cover;
   transition: 0.5s ease;
+  aspect-ratio: 2/2;
 }
 
 .property-card:hover .card-banner img {
@@ -1023,6 +1024,25 @@ input[type="submit"]:hover {
 
 .card-footer-actions-btn:is(:hover, :focus) {
   color: var(--camel);
+}
+
+.product-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 100px;
+  margin: 0 auto;
+}
+
+.product-wrapper div .card-banner {
+  width: 350px;
+  margin: 0 20px 15px 0;
+}
+
+.product-wrapper div .card-banner img {
+  object-fit: cover;
+  aspect-ratio: 2/2;
 }
 
 /*-----------------------------------*\

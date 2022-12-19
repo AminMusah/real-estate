@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Checkout from "./pages/Checkout";
 import CartProvider from "../CartContext";
 import Cart from "./pages/Cart";
+import Product from "./pages/Product";
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/property" element={<Product />} />
+        <Route path="/property/:id" element={<Product />} />
+        <Route path="/properties/property/:id" element={<Product />} />
       </Routes>
     </CartProvider>
   );
