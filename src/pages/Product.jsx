@@ -238,7 +238,7 @@ export default function Product({ image, title, price }) {
                 <li>
                   <div className="gallery-item">
                     <img
-                      src="/images/serenti33.jpg"
+                      src="/images/serenti21.jpg"
                       width="80"
                       height="80"
                       loading="lazy"
@@ -251,7 +251,7 @@ export default function Product({ image, title, price }) {
                 <li>
                   <div className="gallery-item">
                     <img
-                      src="/images/serenti33.jpg"
+                      src="/images/serenti23.jpg"
                       width="80"
                       height="80"
                       loading="lazy"
@@ -264,7 +264,7 @@ export default function Product({ image, title, price }) {
                 <li>
                   <div className="gallery-item">
                     <img
-                      src="/images/serenti33.jpg"
+                      src="/images/serenti27.jpg"
                       width="80"
                       height="80"
                       loading="lazy"
@@ -277,7 +277,7 @@ export default function Product({ image, title, price }) {
                 <li>
                   <div className="gallery-item">
                     <img
-                      src="/images/serenti33.jpg"
+                      src="/images/serenti28.jpg"
                       width="80"
                       height="80"
                       loading="lazy"
@@ -290,7 +290,7 @@ export default function Product({ image, title, price }) {
                 <li>
                   <div className="gallery-item">
                     <img
-                      src="/images/serenti33.jpg"
+                      src="/images/serenti30.jpg"
                       width="80"
                       height="80"
                       loading="lazy"
