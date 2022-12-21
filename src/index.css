@@ -1058,9 +1058,12 @@ input[type="submit"]:hover {
 .gallery-grid-list {
   display: flex;
   align-items: center;
-  /* scroll-padding: 0 24px; */
   overflow-x:scroll;
   scroll-snap-type:x mandatory;
+}
+
+.gallery-grid-list::-webkit-scrollbar {
+height: 2px;
 }
 
 .gallery-grid-list li {

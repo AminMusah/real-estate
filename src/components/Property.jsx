@@ -16,7 +16,7 @@ import Swal from "sweetalert2";
 
 export default function Property({ id, image, title, price }) {
   const { addToCart } = useContext(CartContext);
-  const [color,setColor] = useState("add-to-cart");
+  const [color,setColor] = useState("add-to-cart-btn");
   const [add,setAdd] = useState("Add to Cart");
 
   const alert = ()=>{
