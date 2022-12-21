@@ -1031,13 +1031,18 @@ input[type="submit"]:hover {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 10px 100px;
   margin: 0 auto;
 }
 
 .product-wrapper div .card-banner {
-  width: 350px;
-  margin: 0 20px 15px 0;
+  /* display: flex;
+  margin: auto; */
+  width: 330px;
+  margin: 0 10px 5px 0;
+}
+
+.product-banner {
+  width: 250px;
 }
 
 .product-wrapper div .card-banner img {
@@ -1045,6 +1050,64 @@ input[type="submit"]:hover {
   aspect-ratio: 2/2;
 }
 
+.gallery-list {
+  max-width: 1020px;
+}
+
+
+.gallery-grid-list {
+  display: flex;
+  align-items: center;
+  /* scroll-padding: 0 24px; */
+  overflow-x:scroll;
+  scroll-snap-type:x mandatory;
+}
+
+.gallery-grid-list li {
+padding: 60px 20px;
+border-radius: 10px;
+min-width: 250px;
+scroll-snap-align: start;
+}
+
+.gallery-item {
+  /* min-width: 250px; */
+}
+
+.gallery-item img {
+  object-fit: cover;
+  aspect-ratio: 2/2;
+}
+
+.details-card {
+  border: 1px solid var(--light-gray);
+  box-shadow: var(--shadow-2);
+  padding: 20px;
+  max-width: 1000px;
+  margin-top: 20px;
+}
+
+.details-card-content {
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+}
+
+.details-lists {
+  color: var(--rich-black-fogra-29);
+}
+
+.details-lists li {
+  display: flex;
+  align-items: center;
+  color: var(--rich-black-fogra-29);
+}
+
+.details-lists li span{
+padding-left: 10px;
+}
+
+.details-card .card-footer{
+  padding: 10px 0 0 0 ;
+}
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -1126,10 +1189,24 @@ input[type="submit"]:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: var(--transition-3);
 }
 
 .add-to-cart span {
   margin-right: 1rem;
+}
+
+.added-to-cart {
+  width: 100%;
+  margin: 1rem auto;
+  color: var(--white);
+  height: 4rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--camel);
+  transition: var(--transition-3);
 }
 
 .cart-title {
@@ -1236,6 +1313,7 @@ input[type="submit"]:hover {
  position: relative;
  margin: 0 0 0 5rem;
 }
+
 .shopping-cart-icon .cart-quantity {
  position: absolute;
  top: -11px;
@@ -1614,7 +1692,7 @@ input[type="submit"]:hover {
   }
 
   .card-footer {
-    padding: 20px 30px 30px;
+    padding: 10px 30px 30px;
   }
 
   /**

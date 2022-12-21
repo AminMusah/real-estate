@@ -9,13 +9,15 @@ import HeartLineIcon from "remixicon-react/HeartLineIcon";
 import AddCircleLineIcon from "remixicon-react/AddCircleLineIcon";
 import ArrowLeftRightLineIcon from "remixicon-react/ArrowLeftRightLineIcon";
 import ShoppingCart2LineIcon from "remixicon-react/ShoppingCart2LineIcon";
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import { CartContext } from "../../CartContext";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 export default function Property({ id, image, title, price }) {
   const { addToCart } = useContext(CartContext);
+  const [color,setColor] = useState("add-to-cart");
+  const [add,setAdd] = useState("Add to Cart");
 
   const alert = ()=>{
     const Toast = Swal.mixin({
@@ -38,6 +40,8 @@ export default function Property({ id, image, title, price }) {
 
   const addItem = ()=>{
     addToCart(id, price, image,id) 
+    setColor("added-to-cart")
+    setAdd("Added to Cart")
     alert()
   }
 
@@ -120,11 +124,12 @@ export default function Property({ id, image, title, price }) {
                   <span>Square Ft</span>
                 </li>
               </ul>
+              
               <button
-                className="add-to-cart"
+                className={color}
                 onClick={addItem}
               >
-                <span>Add to cart</span>
+                <span>{add}</span>
                 <ShoppingCart2LineIcon size={15} />
               </button>
             </div>
