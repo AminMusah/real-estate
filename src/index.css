@@ -311,6 +311,10 @@ body.active {
 
 .header-top {
   display: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
 }
 
 .header-bottom {
@@ -321,6 +325,8 @@ body.active {
   background-color: var(--rich-black-fogra-29);
   padding-block: 20px;
   z-index: 4;
+  position: fixed;
+  top: 20px;
 }
 
 .header-bottom.active {
@@ -1032,6 +1038,15 @@ input[type="submit"]:hover {
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
+  position: relative;
+}
+
+.card-product {
+  margin-top: 12rem;
+}
+
+.product-wrap {
+  position: relative;
 }
 
 .product-wrapper div .card-banner {
@@ -1110,6 +1125,92 @@ padding-left: 10px;
 
 .details-card .card-footer{
   padding: 10px 0 0 0 ;
+}
+
+
+.color1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: hue;
+  background-color: #f516f5;
+}
+
+.color2{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: hue;
+  background-color:  #1988f7;
+}
+
+.color3 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: hue;
+  background-color: #21f521;
+}
+
+.color4 { 
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: hue;
+ background-color:  #f38c24;
+}
+
+
+.product-nav {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  z-index: 3;
+}
+
+.product-nav section div {
+  display: inline-block;
+  width: 2vmax;
+  height: 2vmax;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--color);
+  /* position: relative; */
+  z-index: 1;
+  /* mix-blend-mode: hue; */
+}
+
+.product-nav section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blend {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  mix-blend-mode: hue;
+  /* box-shadow: 0px 0px 0px 1500px var(--color); */
+  background-color: #9fbfdf;
+}
+
+.product-nav section div + div {
+  margin-left: 1.5rem;
 }
 /*-----------------------------------*\
   #FOOTER
@@ -1342,6 +1443,16 @@ padding-left: 10px;
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+@media (max-width:998px) {
+  .header-bottom {
+  
+    top: 0;
+   
+  }
+}
+
+
 
 /**
  * responsive for large than 575px screen

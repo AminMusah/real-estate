@@ -24,6 +24,43 @@ export default function Product({ image, title, price }) {
   const [color, setColor] = useState("add-to-cart");
   const [add, setAdd] = useState("Add to Cart");
 
+  const [bg1, setBg1] = useState(false);
+  const [bg2, setBg2] = useState(false);
+  const [bg3, setBg3] = useState(false);
+  const [bg4, setBg4] = useState(false);
+
+  const changeBg1 = () => {
+    setBg1(!bg1);
+    setBg2(false);
+    setBg3(false);
+    setBg4(false);
+    console.log("click");
+  };
+
+  const changeBg2 = () => {
+    setBg2(!bg2);
+    setBg1(false);
+    setBg3(false);
+    setBg4(false);
+    console.log("click");
+  };
+
+  const changeBg3 = () => {
+    setBg3(!bg3);
+    setBg1(false);
+    setBg2(false);
+    setBg4(false);
+    console.log("click");
+  };
+
+  const changeBg4 = () => {
+    setBg4(!bg4);
+    setBg2(false);
+    setBg1(false);
+    setBg3(false);
+    console.log("click");
+  };
+
   const alert = () => {
     const Toast = Swal.mixin({
       toast: true,
@@ -74,9 +111,29 @@ export default function Product({ image, title, price }) {
       <section className="property" id="property">
         <div className="container">
           <div className="about-content"></div>
-          <div>
+          <div >
             <li className="product-wrapper">
-              <div>
+              <div className="product-wrap">
+              <div className="product-nav">
+                <section>
+                  <div
+                    onClick={changeBg1}
+                    style={{ "--color": "#df9fdf" }}
+                  ></div>
+                  <div
+                    onClick={changeBg2}
+                    style={{ "--color": "#9fbfdf" }}
+                  ></div>
+                  <div
+                    onClick={changeBg3}
+                    style={{ "--color": "#9fdf9f" }}
+                  ></div>
+                  <div
+                    onClick={changeBg4}
+                    style={{ "--color": "#dfbf9f" }}
+                  ></div>
+                </section>
+              </div>
                 <figure className="card-banner">
                   <a href="#">
                     <img
@@ -86,9 +143,14 @@ export default function Product({ image, title, price }) {
                     />
                   </a>
                 </figure>
+                {bg1 ? <div className="color1"></div> : ""}
+                {bg2 ? <div className="color2"></div> : ""}
+                {bg3 ? <div className="color3"></div> : ""}
+                {bg4 ? <div className="color4"></div> : ""}
               </div>
-              <div className="property-card">
-                <div className="card-content">
+              
+              <div className="property-card card-product">
+                <div className="card-content ">
                   <div className="card-price">
                     <strong>{itemPrice}</strong>/Month
                   </div>
@@ -182,10 +244,9 @@ export default function Product({ image, title, price }) {
                 basement, there's plenty of room for you to make this house your
                 own. The lot size is just under a half acre, providing a private
                 backyard for you to enjoy. Plus, its location is unbeatable!
-                You'll be close to the West hills mall, Strong
-                Hospital, Town Shopping and Restaurants. Don't miss out
-                on this wonderful opportunity to settle into this quiet
-                neighborhood ranch!
+                You'll be close to the West hills mall, Strong Hospital, Town
+                Shopping and Restaurants. Don't miss out on this wonderful
+                opportunity to settle into this quiet neighborhood ranch!
               </p>
             </div>
 

@@ -7,6 +7,27 @@ const products = [
     image: "/images/property-1.jpg",
   },
   {
+    id: 11,
+    category: "House",
+    name: "Modern Homes",
+    price: 300,
+    image: "/images/pexels-binyamin-mellish-106399-removebg-preview.png",
+  },
+  {
+    id: 12,
+    category: "House",
+    name: "Modern Homes",
+    price: 300,
+    image: "/images/pexels-expect-best-323780-removebg-preview.png",
+  },
+  {
+    id: 13,
+    category: "House",
+    name: "Modern Homes",
+    price: 300,
+    image: "/images/pexels-graphicgumcom-1115804-removebg-preview.png",
+  },
+  {
     id: 2,
     category: "Apartment",
     name: "Comfortable Apartment",
